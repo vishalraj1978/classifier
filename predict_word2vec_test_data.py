@@ -16,7 +16,7 @@ import gensim
 from numpy.linalg import norm
 import setting
 
-logFile=os.path.basename(__file__).split(".")[0]+"_SG_{}.txt".format(setting.SGVALUE)
+logFile=os.path.basename(__file__).split(".")[0]+"_windowsize_{}.txt".format(setting.WINDOWSIZE)
 f=open(setting.LOGPATH+logFile, 'w')
 
 vocab=pd.read_pickle(setting.TRAINVOCAB)

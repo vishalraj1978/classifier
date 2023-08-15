@@ -15,7 +15,7 @@ from pandas import read_csv
 import sys
 import setting
 
-logFile=os.path.basename(__file__).split(".")[0]+".txt"
+logFile=os.path.basename(__file__).split(".")[0]+"_windowsize_{}.txt".format(setting.WINDOWSIZE)
 f=open(setting.LOGPATH+logFile, 'w')
 
 
