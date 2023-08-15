@@ -100,7 +100,7 @@ def createWeightMatrix(f,uniqueListOfTokenList, vocab,windowSize):
 
 def main():
     # co-occur is created using all tokens
-    logFile=os.path.basename(__file__).split(".")[0]+".txt"
+    logFile=os.path.basename(__file__).split(".")[0]+"_windowsize_{}.txt".format(setting.WINDOWSIZE)
     f=open(setting.LOGPATH+logFile, 'w')
     setting.PRINTBOTH(f,setting.TRAINVOCAB)
     if os.path.isfile(setting.WEIGHTMATRIXNORMALIZEDFILE):

@@ -6,7 +6,11 @@ Created on Sat Jul 22 12:46:01 2023
 """
 import os
 import sys
-TRAINDATASET="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Training_Corpora/SemCor/semcor_instance_compact_pos.csv"
+PERSONAL=1
+if PERSONAL:
+    TRAINDATASET="D:/office desktop/AI/PROJECT/GlossBERT/Training_Corpora/SemCor/semcor_instance_compact_pos.csv"
+else:
+    TRAINDATASET="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Training_Corpora/SemCor/semcor_instance_compact_pos.csv"
 MODELPATH="./model/"
 PREDICTPATH="./predict/"
 #TRAIN_DATASET="semeval2013_instance_compact.csv"
@@ -15,14 +19,17 @@ TRAINVOCAB=MODELPATH+"train_vocab.pkl"
 WINDOWSIZE = 15
 
 
+
 if not os.path.isdir(MODELPATH):
     os.mkdir(MODELPATH)
 if not os.path.isdir(PREDICTPATH):
     os.mkdir(PREDICTPATH)
+    
 
 WEIGHTMATRIXNORMALIZEDFILE=MODELPATH+"Weight_Matrix_Normalized_File_window_{}.np".format(WINDOWSIZE)
 WEIGHTMATRIXFILE=MODELPATH+"Weight_Matrix_File_window_{}.np".format(WINDOWSIZE)
 
+LEMMAPOSCLUSTERFILE=MODELPATH+"lemma_pos_dict_indx_count_window_{}.pkl".format(WINDOWSIZE)
 
 # Your model params:
 CONTEXTWINDOW = 7
@@ -31,13 +38,21 @@ NEGATIVES = 5
 MINCOUNT = 5
 EPOCHS = 20
 MODELFILE=MODELPATH+"word2vec_window_{}_sg_{}.model".format(CONTEXTWINDOW,SGVALUE)
-LEMMAPOSCLUSTERFILE=MODELPATH+"lemma_pos_dict_indx_count_window_{}.pkl".format(WINDOWSIZE)
 
-TESTDATASET_SENSEVAL3="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval3/senseval3_instance_compact_pos.csv"
-TESTDATASET_SENSEVAL2="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval2/senseval2_instance_compact_pos.csv"
-TESTDATASET_SEMEVAL2007="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2007/semeval2007_instance_compact_pos.csv"
-TESTDATASET_SEMEVAL2013="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2013/semeval2013_instance_compact_pos.csv"
-TESTDATASET_SEMEVAL2015="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2015/semeval2015_instance_compact_pos.csv"
+
+
+if PERSONAL:
+    TESTDATASET_SENSEVAL3="D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval3/senseval3_instance_compact_pos.csv"
+    TESTDATASET_SENSEVAL2="D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval2/senseval2_instance_compact_pos.csv"
+    TESTDATASET_SEMEVAL2007="D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2007/semeval2007_instance_compact_pos.csv"
+    TESTDATASET_SEMEVAL2013="D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2013/semeval2013_instance_compact_pos.csv"
+    TESTDATASET_SEMEVAL2015="D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2015/semeval2015_instance_compact_pos.csv"
+else:
+    TESTDATASET_SENSEVAL3="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval3/senseval3_instance_compact_pos.csv"
+    TESTDATASET_SENSEVAL2="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval2/senseval2_instance_compact_pos.csv"
+    TESTDATASET_SEMEVAL2007="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2007/semeval2007_instance_compact_pos.csv"
+    TESTDATASET_SEMEVAL2013="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2013/semeval2013_instance_compact_pos.csv"
+    TESTDATASET_SEMEVAL2015="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2015/semeval2015_instance_compact_pos.csv"
 
 
 TESTDATASET=[TESTDATASET_SENSEVAL2,TESTDATASET_SENSEVAL3,TESTDATASET_SEMEVAL2007,TESTDATASET_SEMEVAL2013,TESTDATASET_SEMEVAL2015]

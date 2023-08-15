@@ -123,7 +123,7 @@ def getModel(f,uniqueListOfTokenList,contextWindow,sgValue):
     
     return model
 def main():
-    logFile=os.path.basename(__file__).split(".")[0]+".txt"
+    logFile=os.path.basename(__file__).split(".")[0]+"_windowsize_{}.txt".format(setting.WINDOWSIZE)
     f=open(setting.LOGPATH+logFile, 'w')
     if os.path.isfile(setting.TRAINDATA):
         setting.PRINTBOTH(f,"removing ",setting.TRAINDATA)
