@@ -41,7 +41,7 @@ weightMatrixNormalizedArray1=np.where(weightMatrixNormalizedArray>1, 1, weightMa
 weight_matrix_df=pd.DataFrame(weightMatrixNormalizedArray1)  
 setting.PRINTBOTH(f,"Loading existing  : ",setting.LEMMAPOSCLUSTERFILE)
 lemma_clusters=pd.read_pickle(setting.LEMMAPOSCLUSTERFILE)  
-wmMetricDF = pd.DataFrame(index =['wm_macro', 'wm_micro', 'wm_match','wm_not_match','mfs_macro', 'mfs_micro','mfs_match','mfs_not_match']) 
+metricDF = pd.DataFrame(index =['wm_macro', 'wm_micro', 'wm_match','wm_not_match','mfs_macro', 'mfs_micro','mfs_match','mfs_not_match']) 
 for testDataset in setting.TESTDATASET:
     if os.path.isfile(testDataset):
         df = read_csv(testDataset, sep="\t", encoding="utf-8")
@@ -130,28 +130,19 @@ for testDataset in setting.TESTDATASET:
                 
                 affinity=sum(affinity_list[0:min_val])/min_val
 
-                try:
-                    predict_sense_key[sense]+=affinity
-                    context_sense_key[sense]+=affinity
-                except:
-                    predict_sense_key[sense]=affinity
-                    context_sense_key[sense]=affinity
-                """if(affinity>max_affinity):
+                if(affinity>max_affinity):
                     real_sense=sense
                     max_affinity=affinity
-                if max_affinity==0:
-                    if context_indx in cluster:
-                        real_sense=sense"""
-            """try:
+            try:
                 predict_sense_key[real_sense]+=max_affinity
             except:
-                predict_sense_key[real_sense]=max_affinity"""
+                predict_sense_key[real_sense]=max_affinity
         #setting.PRINTBOTH(f,"Number of clusters in this {}-{}: {}".format(lemma,pos,len(pos_clusters)))
         predict=max(predict_sense_key, key=predict_sense_key.get, default="")
-        """if predict!="" and predict_sense_key[predict]==0:
+        if predict!="" and predict_sense_key[predict]==0:
             #print("predcted sense has value zero, {}:{}".format(predict,predict_sense_key[predict]))
             predictSenseKeyWithZero+=1
-            continue"""
+            continue
         if row.sense_key not in train_df[ (train_df.target_pos == pos) & (train_df.target_lemma == lemma)]['sense_key'].unique():
             senseKeyNotPresent+=1
             #setting.PRINTBOTH(f," {} does not exist in train dataframe ".format(row.sense_key))
@@ -167,9 +158,9 @@ for testDataset in setting.TESTDATASET:
             #setting.PRINTBOTH(f,"Setting the predict to most occured sense in training data")
             #continue
         #setting.PRINTBOTH(f, 'true : {} , predict : {}'.format(row.sense_key,predict))
-        mfs_predict=train_df[ (train_df.target_pos == pos) & (train_df.target_lemma == lemma)]['sense_key'].value_counts().index[0]
         entries.append(row)
         predicted_list.append(predict)
+        mfs_predict=train_df[ (train_df.target_pos == pos) & (train_df.target_lemma == lemma)]['sense_key'].value_counts().index[0]
         mfs_predicted_list.append(mfs_predict)
         #if(len(predicted_list)==100):
             #break
@@ -210,7 +201,7 @@ for testDataset in setting.TESTDATASET:
 
         setting.PRINTBOTH(f,"\t Count of Total :{}, Count of matches :{}, Count of non matches :{}".format(len(pos_series),len(pos_series[pos_series==True]),len(pos_series[pos_series==False]))) 
     
-    posMetricDF.to_csv(setting.METRICPATH+os.path.basename(__file__).split(".")[0]+"_{}_metric.csv".format(os.path.basename(testDataset).split(".")[0].split("_")[0]),sep="\t") 
+    posMetricDF.to_csv(setting.METRICPATH+os.path.basename(__file__).split(".")[0]+"_{}_window_{}_metric.csv".format(os.path.basename(testDataset).split(".")[0].split("_")[0],setting.WINDOWSIZE),sep="\t") 
     wm_macro=f1_score(test_df["sense_key"], test_df["predict_sense_key"], average='macro')
     wm_micro=f1_score(test_df["sense_key"], test_df["predict_sense_key"], average='micro')
     mfs_macro=f1_score(test_df["sense_key"], test_df["mfs_predict_sense_key"], average='macro')
@@ -221,12 +212,13 @@ for testDataset in setting.TESTDATASET:
     wm_not_match=len(match_series[match_series==False])
     mfs_match=len(mfs_match_series[mfs_match_series==True])
     mfs_not_match=len(mfs_match_series[mfs_match_series==False])
-    wmMetricDF[os.path.basename(testDataset).split(".")[0].split("_")[0]]=[wm_macro,wm_micro,wm_match,wm_not_match,mfs_macro,mfs_micro,mfs_match,mfs_not_match]
+    metricDF[os.path.basename(testDataset).split(".")[0].split("_")[0]]=[wm_macro,wm_micro,wm_match,wm_not_match,mfs_macro,mfs_micro,mfs_match,mfs_not_match]
     setting.PRINTBOTH(f,"############################Total score####################################")    
     setting.PRINTBOTH(f,"SCORE(Macro) : ",f1_score(test_df["sense_key"], test_df["predict_sense_key"], average='macro'))
     setting.PRINTBOTH(f,"SCORE(Micro) : ",f1_score(test_df["sense_key"], test_df["predict_sense_key"], average='micro'))
     
     setting.PRINTBOTH(f,"Count of Total :{}, Count of matches :{}, Count of non matches :{}".format(len(match_series),len(match_series[match_series==True]),len(match_series[match_series==False]))) 
-    wmMetricDF.to_csv(setting.METRICPATH+os.path.basename(__file__).split(".")[0]+"_metric.csv",sep="\t")    
+    metricDF.to_csv(setting.METRICPATH+os.path.basename(__file__).split(".")[0]+"_window_{}_metric.csv".format(setting.WINDOWSIZE),sep="\t") 
+    #df1 = read_csv("predict_wm_test_data_semeval2015_metric.csv", sep="\t", encoding="utf-8",index_col=0)
     #sys.stdout.close()
 f.close()
