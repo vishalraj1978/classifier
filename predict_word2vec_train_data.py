@@ -90,14 +90,10 @@ for index,row in new_df.iterrows():
             
             affinity_list.sort(reverse=True)
             affinity=sum(affinity_list[0:min_val])/min_val
-            if(affinity>max_affinity):
-                real_sense=sense
-                max_affinity=affinity
-
-        try:
-            predict_sense_key[real_sense]+=max_affinity
-        except:
-            predict_sense_key[real_sense]=max_affinity
+            try:
+                predict_sense_key[sense]+=affinity
+            except:
+                predict_sense_key[sense]=affinity
     #setting.PRINTBOTH(f,"Number of clusters in this {}-{}: {}".format(lemma,pos,len(sense_clusters)))
     predict=max(predict_sense_key, key=predict_sense_key.get, default="")
     if row.sense_key not in train_df[ (train_df.target_pos == pos) & (train_df.target_lemma == lemma)]['sense_key'].unique():
