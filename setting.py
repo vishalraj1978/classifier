@@ -6,17 +6,18 @@ Created on Sat Jul 22 12:46:01 2023
 """
 import os
 import sys
-PERSONAL=1
+PERSONAL=0
 if PERSONAL:
     TRAINDATASET="D:/office desktop/AI/PROJECT/GlossBERT/Training_Corpora/SemCor/semcor_instance_compact_pos.csv"
 else:
     TRAINDATASET="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Training_Corpora/SemCor/semcor_instance_compact_pos.csv"
 MODELPATH="./model/"
 PREDICTPATH="./predict/"
+METRICPATH="./metric/"
 #TRAIN_DATASET="semeval2013_instance_compact.csv"
 TRAINDATA=MODELPATH+"train_data.pkl"
 TRAINVOCAB=MODELPATH+"train_vocab.pkl"
-WINDOWSIZE = 15
+WINDOWSIZE = 13
 
 
 
@@ -24,6 +25,8 @@ if not os.path.isdir(MODELPATH):
     os.mkdir(MODELPATH)
 if not os.path.isdir(PREDICTPATH):
     os.mkdir(PREDICTPATH)
+if not os.path.isdir(METRICPATH):
+    os.mkdir(METRICPATH)
     
 
 WEIGHTMATRIXNORMALIZEDFILE=MODELPATH+"Weight_Matrix_Normalized_File_window_{}.np".format(WINDOWSIZE)
@@ -32,7 +35,7 @@ WEIGHTMATRIXFILE=MODELPATH+"Weight_Matrix_File_window_{}.np".format(WINDOWSIZE)
 LEMMAPOSCLUSTERFILE=MODELPATH+"lemma_pos_dict_indx_count_window_{}.pkl".format(WINDOWSIZE)
 
 # Your model params:
-CONTEXTWINDOW = 7
+CONTEXTWINDOW = 6
 SGVALUE=0
 NEGATIVES = 5
 MINCOUNT = 5

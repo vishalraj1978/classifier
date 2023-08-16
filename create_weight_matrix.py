@@ -41,7 +41,8 @@ def normaliseWeightMatrix(f,weightMatrix, vocab, track):
             freq_i = vocabValuesList[i]
             freq_j = vocabValuesList[j]
             weightMatrix[i][j] = weightMatrix[i][j] / min(freq_i,freq_j)
-
+    ind = np.diag_indices_from(weightMatrix)
+    weightMatrix[ind] = 1
     return weightMatrix
 
 
