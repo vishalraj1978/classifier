@@ -125,7 +125,8 @@ for testDataset in setting.TESTDATASET:
                 
                 affinity_list.sort(reverse=True)
                 
-                affinity=sum(affinity_list[0:min_val])/min_val
+                affinity=sum(affinity_list[0:min_val])
+                affinity/=(min_val)
                 try:
                     predict_sense_key[sense]+=affinity
                 except:
