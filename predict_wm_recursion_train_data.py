@@ -261,8 +261,8 @@ for indx,row in new_df.iterrows():
     predicted_list.append(predict)
     mfs_predict=train_df[ (train_df.target_pos == pos) & (train_df.target_lemma == lemma)]['sense_key'].value_counts().index[0]
     mfs_predicted_list.append(mfs_predict)
-    if(len(predicted_list)==100):
-        break
+    #if(len(predicted_list)==100):
+        #break
 setting.PRINTBOTH(f,"\n EVALUATION OF LEMMA CLUSTERS for train dataset {}\n")
 setting.PRINTBOTH(f,"senseKeyNotPresent : {}, notPredictedCount : {} ".format(senseKeyNotPresent, notPredictedCount))
 setting.PRINTBOTH(f,"notPresentTarget : {}, notPresentLemmaPosCluster : {} ".format(notPresentTarget, notPresentLemmaPosCluster))    
