@@ -1,0 +1,173 @@
+some column of train_df is null
+Loading existing  :  ./window_11/model/Weight_Matrix_Normalized_File_window_11.np
+Loading existing  :  ./window_11/model/lemma_pos_dict_indx_count_window_11.pkl
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+
+ EVALUATION OF LEMMA CLUSTERS for test dataset D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval2/senseval2_instance_compact_pos.csv
+
+senseKeyNotPresent : 140, notPredictedCount : 3 
+notPresentTarget : 123, notPresentLemmaPosCluster : 119 
+predictSenseKeyWithZero : 0
+len(test_df):1763, len(predicted_list):1763
+len(new_df):2148, len(test_df):1763
+$$$$$$$$$$$$$$$$$$$$$$$ pos:NOUN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 832
+	 total number of sense :391 
+	 SCORE(Macro) :  0.5001151582652696
+	 SCORE(Micro) :  0.7283653846153846
+	 Count of Total :832, Count of matches :606, Count of non matches :226
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADJ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 319
+	 total number of sense :211 
+	 SCORE(Macro) :  0.5654504349816849
+	 SCORE(Micro) :  0.7366771159874608
+	 Count of Total :319, Count of matches :235, Count of non matches :84
+$$$$$$$$$$$$$$$$$$$$$$$ pos:VERB $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 454
+	 total number of sense :307 
+	 SCORE(Macro) :  0.34882984618038965
+	 SCORE(Micro) :  0.4889867841409692
+	 Count of Total :454, Count of matches :222, Count of non matches :232
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADV $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 158
+	 total number of sense :101 
+	 SCORE(Macro) :  0.7023391812865497
+	 SCORE(Micro) :  0.8544303797468354
+	 Count of Total :158, Count of matches :135, Count of non matches :23
+############################Total score####################################
+SCORE(Macro) :  0.4820532859068595
+SCORE(Micro) :  0.6795235394214407
+Count of Total :1763, Count of matches :1198, Count of non matches :565
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+
+ EVALUATION OF LEMMA CLUSTERS for test dataset D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/senseval3/senseval3_instance_compact_pos.csv
+
+senseKeyNotPresent : 90, notPredictedCount : 3 
+notPresentTarget : 82, notPresentLemmaPosCluster : 27 
+predictSenseKeyWithZero : 0
+len(test_df):1580, len(predicted_list):1580
+len(new_df):1782, len(test_df):1580
+$$$$$$$$$$$$$$$$$$$$$$$ pos:NOUN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 780
+	 total number of sense :436 
+	 SCORE(Macro) :  0.5585857602546571
+	 SCORE(Micro) :  0.7525641025641024
+	 Count of Total :780, Count of matches :587, Count of non matches :193
+$$$$$$$$$$$$$$$$$$$$$$$ pos:VERB $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 524
+	 total number of sense :355 
+	 SCORE(Macro) :  0.40151079775139925
+	 SCORE(Micro) :  0.5687022900763359
+	 Count of Total :524, Count of matches :298, Count of non matches :226
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADJ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 267
+	 total number of sense :148 
+	 SCORE(Macro) :  0.5552910052910053
+	 SCORE(Micro) :  0.7378277153558053
+	 Count of Total :267, Count of matches :197, Count of non matches :70
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADV $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 9
+	 total number of sense :7 
+	 SCORE(Macro) :  1.0
+	 SCORE(Micro) :  1.0
+	 Count of Total :9, Count of matches :9, Count of non matches :0
+############################Total score####################################
+SCORE(Macro) :  0.49962744092209366
+SCORE(Micro) :  0.6905063291139241
+Count of Total :1580, Count of matches :1091, Count of non matches :489
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+
+ EVALUATION OF LEMMA CLUSTERS for test dataset D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2007/semeval2007_instance_compact_pos.csv
+
+senseKeyNotPresent : 33, notPredictedCount : 0 
+notPresentTarget : 15, notPresentLemmaPosCluster : 5 
+predictSenseKeyWithZero : 0
+len(test_df):393, len(predicted_list):393
+len(new_df):446, len(test_df):393
+$$$$$$$$$$$$$$$$$$$$$$$ pos:VERB $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 249
+	 total number of sense :201 
+	 SCORE(Macro) :  0.4028290282902829
+	 SCORE(Micro) :  0.570281124497992
+	 Count of Total :249, Count of matches :142, Count of non matches :107
+$$$$$$$$$$$$$$$$$$$$$$$ pos:NOUN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 144
+	 total number of sense :114 
+	 SCORE(Macro) :  0.5077262693156732
+	 SCORE(Micro) :  0.6944444444444444
+	 Count of Total :144, Count of matches :100, Count of non matches :44
+############################Total score####################################
+SCORE(Macro) :  0.4403633491311216
+SCORE(Micro) :  0.6157760814249363
+Count of Total :393, Count of matches :242, Count of non matches :151
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+
+ EVALUATION OF LEMMA CLUSTERS for test dataset D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2013/semeval2013_instance_compact_pos.csv
+
+senseKeyNotPresent : 139, notPredictedCount : 1 
+notPresentTarget : 172, notPresentLemmaPosCluster : 29 
+predictSenseKeyWithZero : 0
+len(test_df):1295, len(predicted_list):1295
+len(new_df):1636, len(test_df):1295
+$$$$$$$$$$$$$$$$$$$$$$$ pos:NOUN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 1295
+	 total number of sense :608 
+	 SCORE(Macro) :  0.5473855990359043
+	 SCORE(Micro) :  0.6903474903474903
+	 Count of Total :1295, Count of matches :894, Count of non matches :401
+############################Total score####################################
+SCORE(Macro) :  0.5473855990359043
+SCORE(Micro) :  0.6903474903474903
+Count of Total :1295, Count of matches :894, Count of non matches :401
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+
+ EVALUATION OF LEMMA CLUSTERS for test dataset D:/office desktop/AI/PROJECT/GlossBERT/Evaluation_Datasets/semeval2015/semeval2015_instance_compact_pos.csv
+
+senseKeyNotPresent : 105, notPredictedCount : 6 
+notPresentTarget : 88, notPresentLemmaPosCluster : 8 
+predictSenseKeyWithZero : 1
+len(test_df):750, len(predicted_list):750
+len(new_df):958, len(test_df):750
+$$$$$$$$$$$$$$$$$$$$$$$ pos:NOUN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 396
+	 total number of sense :184 
+	 SCORE(Macro) :  0.48048457765056957
+	 SCORE(Micro) :  0.6868686868686869
+	 Count of Total :396, Count of matches :272, Count of non matches :124
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADJ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 118
+	 total number of sense :70 
+	 SCORE(Macro) :  0.415807560137457
+	 SCORE(Micro) :  0.6440677966101694
+	 Count of Total :118, Count of matches :76, Count of non matches :42
+$$$$$$$$$$$$$$$$$$$$$$$ pos:VERB $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 203
+	 total number of sense :111 
+	 SCORE(Macro) :  0.3433850702143385
+	 SCORE(Micro) :  0.5615763546798029
+	 Count of Total :203, Count of matches :114, Count of non matches :89
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADV $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 33
+	 total number of sense :19 
+	 SCORE(Macro) :  0.6521739130434783
+	 SCORE(Micro) :  0.8484848484848486
+	 Count of Total :33, Count of matches :28, Count of non matches :5
+############################Total score####################################
+SCORE(Macro) :  0.4337630424259426
+SCORE(Micro) :  0.6533333333333333
+Count of Total :750, Count of matches :490, Count of non matches :260

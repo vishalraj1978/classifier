@@ -1,0 +1,39 @@
+some column of train_df is null
+Loading existing  :  ./window_17/model/lemma_pos_dict_indx_count_window_17.pkl
+
+ EVALUATION OF LEMMA CLUSTERS for train dataset {}
+
+senseKeyNotPresent : 0, notPredictedCount : 0 
+notPresentTarget : 0, notPresentLemmaPosCluster : 0 
+predictSenseKeyWithZero : 196239
+len(test_df):0, len(predicted_list):0
+len(new_df):196239, len(test_df):0
+):196239
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADJ $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 28482
+	 total number of sense :6248 
+	 SCORE(Macro) :  0.6670498843741142
+	 SCORE(Micro) :  0.8011375605645671
+	 Count of Total :28482, Count of matches :22818, Count of non matches :5664
+$$$$$$$$$$$$$$$$$$$$$$$ pos:VERB $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 69168
+	 total number of sense :9125 
+	 SCORE(Macro) :  0.35746379246391524
+	 SCORE(Micro) :  0.5673432801295397
+	 Count of Total :69168, Count of matches :39242, Count of non matches :29926
+$$$$$$$$$$$$$$$$$$$$$$$ pos:NOUN $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 86141
+	 total number of sense :15761 
+	 SCORE(Macro) :  0.5947486822547704
+	 SCORE(Micro) :  0.7525800722071951
+	 Count of Total :86141, Count of matches :64828, Count of non matches :21313
+$$$$$$$$$$$$$$$$$$$$$$$ pos:ADV $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+len(pos_df) total number of instances : 12448
+	 total number of sense :1741 
+	 SCORE(Macro) :  0.727208387143075
+	 SCORE(Micro) :  0.8258354755784063
+	 Count of Total :12448, Count of matches :10280, Count of non matches :2168
+############################Total score####################################
+SCORE(Macro) :  0.5718930553040297
+SCORE(Micro) :  0.6989844016734696
+Count of Total :196239, Count of matches :137168, Count of non matches :59071

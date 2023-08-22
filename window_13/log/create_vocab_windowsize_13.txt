@@ -1,0 +1,32 @@
+removing  ./model/train_data.pkl
+removing  ./model/train_vocab.pkl
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+Saving token list ./model/train_data.pkl
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+Creating new vocabulory ./model/train_vocab.pkl
+saving vocabulory :  model_vocab.pkl
+number of keys in vocab are  35152
+saving model :  ./model/word2vec_window_6_sg_0.model
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+number of  uniqueListOfTokenList in dataset are  33495
+========checking by loading saved models now ========
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+\small_NOUN
+[('musket_NOUN', 0.943539023399353), ('blind_NOUN', 0.9435202479362488), ('run_down_VERB', 0.9432274699211121), ('damn_ADJ', 0.9432049989700317), ('losses_NOUN', 0.9431418776512146), ('focus_VERB', 0.943125307559967), ('crushed_ADJ', 0.9431054592132568), ('freer_ADJ', 0.9428284764289856), ('interference_NOUN', 0.9427167177200317), ('quirt_NOUN', 0.9426994323730469)]
+\long_ADJ
+[('around_ADP', 0.9999274015426636), ('fire_NOUN', 0.9999173879623413), ('Miss_NOUN', 0.9999158978462219), ('cold_ADJ', 0.9999136924743652), ('almost_ADV', 0.9999126195907593), ('red_ADJ', 0.9999123811721802), ('heart_NOUN', 0.9999112486839294), ('close_ADJ', 0.9999105334281921), ('sound_NOUN', 0.9999071359634399), ('music_NOUN', 0.9999067187309265)]
+rt_NOUN
+[('term_NOUN', 0.9999480247497559), ('similar_ADJ', 0.9999382495880127), ('discussion_NOUN', 0.9999347925186157), ('personal_ADJ', 0.9999324679374695), ('present_VERB', 0.9999316334724426), ('indicate_VERB', 0.9999291300773621), ('relation_NOUN', 0.999925434589386), ('note_VERB', 0.9999246597290039), ('test_NOUN', 0.9999244809150696), ('source_NOUN', 0.9999243021011353)]
+
+vending_machine_NOUN
+[('Mass._NOUN', 0.989304780960083), ('guilty_ADJ', 0.9891809225082397), ('Center_NOUN', 0.9891777634620667), ('orbit_NOUN', 0.9891653060913086), ('confusion_NOUN', 0.9891571998596191), ('Stevens_NOUN', 0.9891307950019836), ('cotton_NOUN', 0.9891262054443359), ('earlier_ADJ', 0.989117443561554), ('secret_ADJ', 0.9891014695167542), ('clean_VERB', 0.9890931248664856)]

@@ -1,0 +1,30 @@
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+Saving token list ./window_7/model/train_data.pkl
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+Creating new vocabulory ./window_7/model/train_vocab.pkl
+saving vocabulory :  model_vocab.pkl
+number of keys in vocab are  35152
+saving model :  ./window_7/model/word2vec_window_3_sg_0.model
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+number of  uniqueListOfTokenList in dataset are  33495
+========checking by loading saved models now ========
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+\small_NOUN
+[('adherence_NOUN', 0.8026611804962158), ('discriminate_VERB', 0.8019102811813354), ('utmost_ADJ', 0.8015928268432617), ('dialyze_VERB', 0.8010921478271484), ('skullcap_NOUN', 0.8010550737380981), ('crushed_ADJ', 0.8008720874786377), ('losses_NOUN', 0.8003396391868591), ('flair_NOUN', 0.7997875213623047), ('musket_NOUN', 0.7997837662696838), ('draw_back_VERB', 0.7995747327804565)]
+\long_ADJ
+[('remain_VERB', 0.9998941421508789), ('almost_ADV', 0.9998852610588074), ('war_NOUN', 0.9998828768730164), ('music_NOUN', 0.999878466129303), ('course_NOUN', 0.9998766779899597), ('add_VERB', 0.999876081943512), ('at_least_ADV', 0.9998760223388672), ('short_ADJ', 0.9998733401298523), ('body_NOUN', 0.9998726844787598), ('often_ADV', 0.9998719096183777)]
+rt_NOUN
+[('force_NOUN', 0.9999217391014099), ('term_NOUN', 0.9999184012413025), ('appear_VERB', 0.9999172687530518), ('especially_ADV', 0.9999165534973145), ('effort_NOUN', 0.9999150037765503), ('order_NOUN', 0.9999121427536011), ('society_NOUN', 0.9999098181724548), ('create_VERB', 0.999908983707428), ('principle_NOUN', 0.9999081492424011), ('action_NOUN', 0.9999057650566101)]
+
+vending_machine_NOUN
+[('employment_NOUN', 0.9904689192771912), ('Center_NOUN', 0.9903846383094788), ('orbit_NOUN', 0.9903064370155334), ('guilty_ADJ', 0.9902508854866028), ('regard_NOUN', 0.9902311563491821), ('General_NOUN', 0.9902236461639404), ('Mass._NOUN', 0.990222156047821), ('Senate_NOUN', 0.9902219176292419), ('issue_NOUN', 0.9902209043502808), ('South_NOUN', 0.9902206063270569)]

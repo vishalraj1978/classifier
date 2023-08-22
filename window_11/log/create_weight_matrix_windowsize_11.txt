@@ -1,0 +1,14 @@
+./model/train_vocab.pkl
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+Saving token list ./model/train_data.pkl
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+number of keys in vocab are  35152
+ flattenlist : 343107 , set(flattenList) : 35152
+Total length= 35152
+--------Normalising-------------
+saving weightMatrixNormalizedFile :  ./model/Weight_Matrix_Normalized_File_window_11.np

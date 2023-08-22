@@ -175,7 +175,7 @@ for testDataset in setting.TESTDATASET:
     test_df["mfs_predict_sense_key"]=mfs_predicted_list 
     from sklearn.metrics import f1_score
     
-    test_df.to_csv(setting.PREDICTPATH+os.path.basename(__file__).split(".")[0]+"_predict.csv",sep="\t")  
+    test_df.to_csv(setting.PREDICTPATH+os.path.basename(__file__).split(".")[0]+"_window_{}_predict.csv".format(setting.WINDOWSIZE),sep="\t")  
     posMetricDF = pd.DataFrame(index =['wm_pos_macro', 'wm_pos_micro', 'pos_match','pos_not_match','mfs_pos_macro', 'mfs_pos_micro','mfs_pos_match','mfs_pos_not_match']) 
     for pos in test_df.target_pos.unique():
         pos_df = test_df[test_df.target_pos == pos]

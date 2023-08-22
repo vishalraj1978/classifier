@@ -6,20 +6,24 @@ Created on Sat Jul 22 12:46:01 2023
 """
 import os
 import sys
-PERSONAL=0
+PERSONAL=1
 if PERSONAL:
     TRAINDATASET="D:/office desktop/AI/PROJECT/GlossBERT/Training_Corpora/SemCor/semcor_instance_compact_pos.csv"
 else:
     TRAINDATASET="C:/Users/vishalr/OneDrive - STMicroelectronics/Desktop/AI/PROJECT/GlossBERT/Training_Corpora/SemCor/semcor_instance_compact_pos.csv"
-MODELPATH="./model/"
-PREDICTPATH="./predict/"
-METRICPATH="./metric/"
+WINDOWSIZE = 17
+WINDOWPATH="./window_{}".format(WINDOWSIZE)
+MODELPATH="{}/model/".format(WINDOWPATH)
+PREDICTPATH="{}/predict/".format(WINDOWPATH)
+METRICPATH="{}/metric/".format(WINDOWPATH)
+LOGPATH="{}/log/".format(WINDOWPATH)
 #TRAIN_DATASET="semeval2013_instance_compact.csv"
 TRAINDATA=MODELPATH+"train_data.pkl"
 TRAINVOCAB=MODELPATH+"train_vocab.pkl"
-WINDOWSIZE = 13
 
 
+if not os.path.isdir(WINDOWPATH):
+    os.mkdir(WINDOWPATH)
 
 if not os.path.isdir(MODELPATH):
     os.mkdir(MODELPATH)
@@ -27,7 +31,10 @@ if not os.path.isdir(PREDICTPATH):
     os.mkdir(PREDICTPATH)
 if not os.path.isdir(METRICPATH):
     os.mkdir(METRICPATH)
-    
+ #TESTDATASET=[TESTDATASET_SENSEVAL3]
+
+if not os.path.isdir(LOGPATH):
+    os.mkdir(LOGPATH)   
 
 WEIGHTMATRIXNORMALIZEDFILE=MODELPATH+"Weight_Matrix_Normalized_File_window_{}.np".format(WINDOWSIZE)
 WEIGHTMATRIXFILE=MODELPATH+"Weight_Matrix_File_window_{}.np".format(WINDOWSIZE)
@@ -35,7 +42,7 @@ WEIGHTMATRIXFILE=MODELPATH+"Weight_Matrix_File_window_{}.np".format(WINDOWSIZE)
 LEMMAPOSCLUSTERFILE=MODELPATH+"lemma_pos_dict_indx_count_window_{}.pkl".format(WINDOWSIZE)
 
 # Your model params:
-CONTEXTWINDOW = 6
+CONTEXTWINDOW = 8
 SGVALUE=0
 NEGATIVES = 5
 MINCOUNT = 5
@@ -60,10 +67,7 @@ else:
 
 TESTDATASET=[TESTDATASET_SENSEVAL2,TESTDATASET_SENSEVAL3,TESTDATASET_SEMEVAL2007,TESTDATASET_SEMEVAL2013,TESTDATASET_SEMEVAL2015]
 
-#TESTDATASET=[TESTDATASET_SENSEVAL3]
-LOGPATH="./log/"
-if not os.path.isdir(LOGPATH):
-    os.mkdir(LOGPATH)
+
 
 def PRINTBOTH(file, *args):
     toprint = ' '.join([str(arg) for arg in args])

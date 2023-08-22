@@ -1,0 +1,30 @@
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+Saving token list ./window_17/model/train_data.pkl
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+Creating new vocabulory ./window_17/model/train_vocab.pkl
+saving vocabulory :  model_vocab.pkl
+number of keys in vocab are  35152
+saving model :  ./window_17/model/word2vec_window_8_sg_0.model
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+number of  uniqueListOfTokenList in dataset are  33495
+========checking by loading saved models now ========
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+\small_NOUN
+[('adolescent_NOUN', 0.7064195275306702), ('halter_NOUN', 0.7039790153503418), ('utmost_ADJ', 0.69924396276474), ("Patrick's_NOUN", 0.6991239786148071), ('query_VERB', 0.6990224719047546), ('skullcap_NOUN', 0.6990215182304382), ('bewildered_ADJ', 0.698988139629364), ('Hack_NOUN', 0.6987966895103455), ('oleophobic_ADJ', 0.6971665024757385), ('self-consciousness_NOUN', 0.6969020962715149)]
+\long_ADJ
+[('move_VERB', 0.9999285340309143), ('long_ADV', 0.9999257326126099), ('drive_VERB', 0.999919593334198), ('mouth_NOUN', 0.9999150633811951), ('other_NOUN', 0.999914824962616), ('eat_VERB', 0.9999133944511414), ('carry_VERB', 0.9999128580093384), ('throw_VERB', 0.999912679195404), ('behind_ADP', 0.9999120831489563), ('hit_VERB', 0.9999120831489563)]
+rt_NOUN
+[('position_NOUN', 0.9999439120292664), ('become_VERB', 0.9999423027038574), ('place_VERB', 0.9999422430992126), ('appear_VERB', 0.9999415874481201), ('film_NOUN', 0.9999390840530396), ('prepare_VERB', 0.9999389052391052), ('issue_NOUN', 0.9999375939369202), ('offer_VERB', 0.9999361038208008), ('subject_NOUN', 0.999936044216156), ('add_VERB', 0.9999353885650635)]
+
+vending_machine_NOUN
+[('Center_NOUN', 0.9924396872520447), ('Senate_NOUN', 0.9924309253692627), ('employment_NOUN', 0.9924019575119019), ('considerably_ADV', 0.9923511743545532), ('branch_NOUN', 0.9923504590988159), ('defense_NOUN', 0.9923414587974548), ('New_NOUN', 0.9923399686813354), ('individual_NOUN', 0.992335319519043), ('farm_NOUN', 0.992333710193634), ('establishment_NOUN', 0.9923325777053833)]

@@ -1,0 +1,9 @@
+	train
+wm_macro	0.7271296317300573
+wm_micro	0.8470230268187516
+wm_match	166191.0
+wm_not_match	30015.0
+mfs_macro	0.6342849867837661
+mfs_micro	0.7441158782096366
+mfs_match	146000.0
+mfs_not_match	50206.0

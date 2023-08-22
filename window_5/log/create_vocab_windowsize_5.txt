@@ -1,0 +1,30 @@
+Index(['org_sentence', 'sentence', 'target_index_start', 'target_index_end',
+       'target_id', 'target_lemma', 'target_pos', 'sense_key',
+       'lemma_instance', 'token_list'],
+      dtype='object')
+Saving token list ./window_5/model/train_data.pkl
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+Creating new vocabulory ./window_5/model/train_vocab.pkl
+saving vocabulory :  model_vocab.pkl
+number of keys in vocab are  35152
+saving model :  ./window_5/model/word2vec_window_2_sg_0.model
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+number of  uniqueListOfTokenList in dataset are  33495
+========checking by loading saved models now ========
+number of keys in word2vec model are  35152
+number of keys in vocab are  35152
+len(df['token_list'].tolist()) 196239
+number of uniqueListOfTokenList in dataset are  33495
+ flattenlist : 343107 , set(flattenList) : 35152
+\small_NOUN
+[('adherence_NOUN', 0.7904666662216187), ('utmost_ADJ', 0.7892923951148987), ('dialyze_VERB', 0.7890939712524414), ('discriminate_VERB', 0.788943886756897), ('blind_NOUN', 0.7889277935028076), ('run_down_VERB', 0.7887663245201111), ('crushed_ADJ', 0.7881518006324768), ('specially_ADV', 0.787685215473175), ('Economic_NOUN', 0.7874647378921509), ('losses_NOUN', 0.7873850464820862)]
+\long_ADJ
+[('almost_ADV', 0.9998629093170166), ('patient_NOUN', 0.9998555779457092), ('wear_VERB', 0.999844491481781), ('often_ADV', 0.9998438358306885), ('although_ADP', 0.9998431205749512), ('at_least_ADV', 0.9998425245285034), ('least_ADJ', 0.9998420476913452), ('perhaps_ADV', 0.9998405575752258), ('best_ADJ', 0.9998383522033691), ('point_NOUN', 0.9998360872268677)]
+rt_NOUN
+[('action_NOUN', 0.9998922944068909), ('follow_VERB', 0.9998862147331238), ('develop_VERB', 0.9998860359191895), ('usually_ADV', 0.9998847842216492), ('large_ADJ', 0.9998819828033447), ('full_ADJ', 0.9998745322227478), ('position_NOUN', 0.9998728036880493), ('available_ADJ', 0.9998711347579956), ('contain_VERB', 0.9998688697814941), ('study_NOUN', 0.999868631362915)]
+
+vending_machine_NOUN
+[('orbit_NOUN', 0.9860845804214478), ('confusion_NOUN', 0.9860513210296631), ('employment_NOUN', 0.9860448241233826), ('famous_ADJ', 0.986039400100708), ('regard_NOUN', 0.9860314726829529), ('Britain_NOUN', 0.985984206199646), ('guilty_ADJ', 0.9859629273414612), ('collage_NOUN', 0.9859526753425598), ('opening_NOUN', 0.985946536064148), ('welcome_VERB', 0.9859371781349182)]
